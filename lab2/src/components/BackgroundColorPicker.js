@@ -25,9 +25,11 @@ class BackgroundColorPicker extends Component {
 			<div>
 				<h3>Välj bakgrundsfärg</h3>
 				<select className="custom-select" onChange={this.props.onChange}>
-					{this.colors.map((color, index) => (
-						<option key={index} value={color.hex}>{color.name}</option>
-					))}
+					{this.colors.map((color, index) => {
+						return (
+							<option key={index} value={color.hex}>{color.name}</option>
+						)
+					})}
 				</select>
 			</div>
 		);

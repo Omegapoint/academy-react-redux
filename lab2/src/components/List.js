@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import SearchBar from './SearchBar';
 
 class List extends Component {
+
+	static defaultProps = {
+		items: []
+	};
 
 	constructor(props) {
 		super(props);
@@ -30,16 +35,23 @@ class List extends Component {
 	};
 
 	render() {
+		const filteredItems = this.filterListItemsBySearchTerm(this.state.searchTerm);
 		return (
 			<div>
 				<h1>I am {this.props.title}</h1>
 				<SearchBar onKeyPressed={this.onKeyPressed}/>
-				<ul className="list-group">
-					{this.props.items.length > 0 && this.filterListItemsBySearchTerm(this.state.searchTerm).map(this.renderListItem)}
-				</ul>
+				{this.props.items.length === 0 ? (<div>Empty list...</div>) : (
+					<ul className="list-group">
+						{this.props.items.length > 0 && filteredItems.map(this.renderListItem)}
+					</ul>
+				)}
 			</div>
 		);
 	}
 }
+
+List.propTypes = {
+	items: PropTypes.array
+};
 
 export default List;
