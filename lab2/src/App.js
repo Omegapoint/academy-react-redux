@@ -21,22 +21,21 @@ class App extends Component {
 	}
 
 	changeBackgroundColor = (e) => {
-		this.setState({
-			bgColor: e.target.value
-		})
+		// const color = e.target.value;
+		// TODO: Task 3 - change background color by setting state.
 	};
 
 	render() {
 		return (
 			<div className="App container" style={{ background: this.state.bgColor}}>
-				<p className="App-header" style={{fontFamily: 'Pacifico'}}>
+				<div className="App-header" style={{fontFamily: 'Pacifico'}}>
 					<p>Lab 2</p>
 					<p className="App-header-description">
 						~ Öppna upp lab-2-readme.md och följ instruktionerna ~
 					</p>
-				</p>
-				<BackgroundColorPicker onChange={this.changeBackgroundColor}/>
-				<List title={'*Insert title'} items={this.state.users}/>
+				</div>
+				<BackgroundColorPicker onChange={(this.changeBackgroundColor)}/>
+				<List title={'*Insert title'} items={/*TODO: Task 4 */[]}/>
 			</div>
 		);
 	}
