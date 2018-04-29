@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import SearchBar from './SearchBar';
+import SearchBar from '../SearchBar/SearchBar';
+
+import "./List.css";
 
 class List extends Component {
 
@@ -37,8 +39,8 @@ class List extends Component {
 	render() {
 		const filteredItems = this.filterListItemsBySearchTerm(this.state.searchTerm);
 		return (
-			<div>
-				<h1>I am {this.props.title}</h1>
+			<div className="List">
+				<h2 className="List-title">{this.props.title}</h2>
 				<SearchBar onKeyPressed={this.onKeyPressed}/>
 				{this.props.items.length === 0 ? (<div>Empty list...</div>) : (
 					<ul className="list-group">

@@ -1,10 +1,11 @@
-.App {
-  text-align: center;
+#root {
+  background: whitesmoke;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App {
+  padding: 25px 15px 25px 15px;
+  border: 2px solid gray;
+  min-height: 250px;
 }
 
 .App-header {
@@ -12,14 +13,12 @@
   height: 150px;
   padding: 20px;
   color: white;
+  font-size: 42px;
+  text-align: center;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
+.App-header-description {
+  font-size: 18px;
 }
 
 @keyframes App-logo-spin {

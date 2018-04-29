@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
+import "./BackgroundColorPicker.css";
 
 class BackgroundColorPicker extends Component {
 	colors = [
-		{
-			hex: '#ff0',
-			name: 'yellow'
-		},
 		{
 			hex: 'lavender',
 			name: 'lavender'
 		},
 		{
-			hex: '#5a2b06',
-			name: '💩'
+			hex: 'gold',
+			name: 'gold'
+		},
+		{
+			hex: '#f48c42',
+			name: '🎃'
 		},
 		{
 			hex: 'rebeccapurple',
@@ -22,8 +23,8 @@ class BackgroundColorPicker extends Component {
 
 	render() {
 		return (
-			<div>
-				<h3>Välj bakgrundsfärg</h3>
+			<div className="BackgroundColorPicker">
+				<h5>Välj bakgrundsfärg</h5>
 				<select className="custom-select" onChange={this.props.onChange}>
 					{this.colors.map((color, index) => {
 						return (

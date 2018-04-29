@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
-import List from './components/List';
 import { getUsers } from './api';
-import BackgroundColorPicker from './components/BackgroundColorPicker';
+import 'typeface-pacifico';
+import List from './components/List/List';
+import BackgroundColorPicker from './components/BackgroundColorPicker/BackgroundColorPicker';
+
+import './App.css';
 
 class App extends Component {
 	state = {
 		users: [],
-		bgColor: '#ff0'
+		bgColor: 'lavender'
 	};
 
 	componentDidMount() {
@@ -26,9 +28,15 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="container" style={{ background: this.state.bgColor}}>
+			<div className="App container" style={{ background: this.state.bgColor}}>
+				<p className="App-header" style={{fontFamily: 'Pacifico'}}>
+					<p>Lab 2</p>
+					<p className="App-header-description">
+						~ Öppna upp lab-2-readme.md och följ instruktionerna ~
+					</p>
+				</p>
 				<BackgroundColorPicker onChange={this.changeBackgroundColor}/>
-				<List title={'my title'} items={this.state.users}/>
+				<List title={'*Insert title'} items={this.state.users}/>
 			</div>
 		);
 	}
