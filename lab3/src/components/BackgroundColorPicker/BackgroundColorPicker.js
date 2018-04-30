@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { setBackgroundColor } from '../../actions/backgroundActions';
+
 import "./BackgroundColorPicker.css";
 
 class BackgroundColorPicker extends Component {
@@ -22,11 +25,15 @@ class BackgroundColorPicker extends Component {
 		}
 	];
 
+	handleOnChange = (e) => {
+		this.props.setBackgroundColor(e.target.value);
+	}
+
 	render() {
 		return (
 			<div className="BackgroundColorPicker">
 				<h5>Välj bakgrundsfärg</h5>
-				<select className="custom-select" onChange={this.props.onChange}>
+				<select className="custom-select" onChange={this.handleOnChange}>
 					{this.colors.map((color, index) => {
 						return (
 							<option key={index} value={color.hex}>{color.name}</option>
@@ -38,4 +45,12 @@ class BackgroundColorPicker extends Component {
 	}
 }
 
-export default BackgroundColorPicker;
+const mapDispatchToProps = (dispatch) => {
+	return {
+		setBackgroundColor: (color) => {
+			dispatch(setBackgroundColor(color));
+		}
+	};
+}
+
+export default connect(null, mapDispatchToProps)(BackgroundColorPicker);
