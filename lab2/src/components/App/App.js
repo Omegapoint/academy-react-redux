@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { getUsers } from './api';
+import { getUsers } from '../../api';
 import 'typeface-pacifico';
-import List from './components/List/List';
-import BackgroundColorPicker from './components/BackgroundColorPicker/BackgroundColorPicker';
+import List from '../List/List';
+import BackgroundColorPicker from '../BackgroundColorPicker/BackgroundColorPicker';
 
 import './App.css';
 
@@ -31,11 +31,11 @@ class App extends Component {
 				<div className="App-header" style={{fontFamily: 'Pacifico'}}>
 					<p>Lab 2</p>
 					<p className="App-header-description">
-						~ Öppna upp lab-2-readme.md och följ instruktionerna ~
+						~ Öppna upp README.md och följ instruktionerna ~
 					</p>
 				</div>
 				<BackgroundColorPicker onChange={(this.changeBackgroundColor)}/>
-				<List title={'*Insert title'} items={/*TODO: Task 4 */[]}/>
+				<List title={/*TODO: Task 1*/'*Insert title'} items={/*TODO: Task 4 */[]}/>
 			</div>
 		);
 	}

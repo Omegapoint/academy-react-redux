@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "./BackgroundColorPicker.css";
 
 class BackgroundColorPicker extends Component {
-	
+
 	colors = [
 		{
 			hex: 'lavender',
@@ -18,7 +18,7 @@ class BackgroundColorPicker extends Component {
 		},
 		{
 			hex: 'rebeccapurple',
-			name: 'beautify purple'
+			name: 'Beautiful purple'
 		}
 	];
 
