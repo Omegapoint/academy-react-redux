@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BackgroundColorPicker from '../BackgroundColorPicker/BackgroundColorPicker';
 import List from '../List/List';
+import UserDetails from '../UserDetails/UserDetails';
 import { connect } from 'react-redux';
 import { getAllUsers } from '../../actions/userActions';
 
@@ -8,7 +9,9 @@ import './Container.css';
 
 class Container extends Component {
 
-    // TODO: Task 4 - get all users upon mounting the component
+    componentDidMount() {
+        this.props.getAllUsers();
+    }
 
     render() {
         return (
@@ -20,7 +23,8 @@ class Container extends Component {
 					</p>
                 </div>
                 <BackgroundColorPicker onChange={() => { console.log("FOO") }} />
-                <List title={'Users'} items={[]}/>
+                <UserDetails />
+                <List title={'Users'} />
             </div>
         );
     }

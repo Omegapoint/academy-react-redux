@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import SearchBar from '../SearchBar/SearchBar';
+import { getUserById } from '../../actions/userActions';
 import { connect } from 'react-redux';
 
 import "./List.css";
@@ -15,7 +16,7 @@ class List extends Component {
 	}
 
 	onItemClick = (userId) => {
-		console.log("onItemClick()", userId);
+		this.props.getUserById(userId);
 	}
 
 	onKeyPressed = (e) => {
@@ -41,7 +42,7 @@ class List extends Component {
 					<ul className="list-group">
 						{this.props.items.length > 0 &&
 							filteredItems.map((item, index) => (
-								<li className="List-item list-group-item" key={index} onClick={this.onItemClick(item.id)}>{item.name}</li>
+								<li className="List-item list-group-item" key={index} onClick={(e) => this.onItemClick(item.id)}>{item.name}</li>
 							))
 						}
 					</ul>
@@ -52,7 +53,17 @@ class List extends Component {
 }
 
 const mapStateToProps = (state) => {
-	// TODO: Task 5 - implement mapStateToProps
+	return {
+		items: state.users.users
+	};
 }
 
-export default connect(mapStateToProps, null)(List);
+const mapDispatchToProps = (dispatch) => {
+	return {
+		getUserById: (id) => {
+			dispatch(getUserById(id));
+		}
+	};
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(List);

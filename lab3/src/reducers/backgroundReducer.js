@@ -1,7 +1,7 @@
 import { SET_BG_COLOR } from "../actions/backgroundActions";
 
 const initialState = {
-    bgColor: 'lavender'
+    bgColor: 'gold'
 };
 
 const backgroundReducer = (state = initialState, action = {}) => {
