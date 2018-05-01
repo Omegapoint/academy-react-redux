@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { getUsers } from '../../api';
-import 'typeface-pacifico';
 import List from '../List/List';
 import BackgroundColorPicker from '../BackgroundColorPicker/BackgroundColorPicker';
 
@@ -28,10 +27,10 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App container" style={{ background: this.state.bgColor}}>
-				<div className="App-header" style={{fontFamily: 'Pacifico'}}>
+				<div className="App-header">
 					<p>Lab 2</p>
 					<p className="App-header-description">
-						~ Öppna upp README.md och följ instruktionerna ~
+						👩‍💻 Öppna upp README.md och följ instruktionerna 👨‍💻
 					</p>
 				</div>
 				<BackgroundColorPicker onChange={(this.changeBackgroundColor)}/>
