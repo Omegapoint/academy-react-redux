@@ -1,6 +1,8 @@
 # Lab 3 Solutions
 
-## Task 2
+## Del 1
+
+### Task 2
 I `backgroundReducers.js`:
 ```javascript
     const initialState = {
@@ -8,7 +10,7 @@ I `backgroundReducers.js`:
 };
 ```
 
-## Task 3
+### Task 3
 I `userActions.js`:
 ```javascript
     .then((users) => {
@@ -21,7 +23,7 @@ I `userActions.js`:
     })
 ```
 
-## Task 4
+### Task 4
 I `userReducers.js`:
 ```javascript
     ...
@@ -33,7 +35,7 @@ I `userReducers.js`:
     ...
 ```
 
-## Task 5
+### Task 5
 I `Container.js`:
 ```javascript
     componentDidMount() {
@@ -41,7 +43,7 @@ I `Container.js`:
     }
 ```
 
-## Task 6
+### Task 6
 I `List.js`:
 ```javascript
     const mapStateToProps = (state) => {
@@ -51,10 +53,13 @@ I `List.js`:
     }
 ```
 
-## Task 7
+### Task 7
 I `Container.js`:
 ```javascript
     ...
     <List title={'Users'} />
     ...
 ```
+
+## Del 2
+Lösninsförslag till del två går att se genom att byta branch till `solutions`. Här finns även alla uppgifter till alla labbar lösta.
