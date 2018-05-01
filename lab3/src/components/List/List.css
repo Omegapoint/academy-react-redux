@@ -3,3 +3,7 @@
 .List-title {
     text-align: center;
 }
+
+.List-item:hover {
+    cursor: pointer;
+}

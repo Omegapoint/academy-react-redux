@@ -1,59 +1,60 @@
-# Lab 2 Solutions
+# Lab 3 Solutions
 
 ## Task 2
+I `backgroundReducers.js`:
 ```javascript
-    <List title={'Users'} items={/*TODO: Task 4 */[]}/>
+    const initialState = {
+    bgColor: 'gold'
+};
 ```
 
 ## Task 3
+I `userActions.js`:
 ```javascript
-    changeBackgroundColor = (e) => {
-        const color = e.target.value;
-		this.setState({
-			bgColor: color
-		})
-	};
+    .then((users) => {
+        dispatch({
+            type: GET_USERS,
+            payload: {
+                users
+            }
+        })
+    })
 ```
 
 ## Task 4
+I `userReducers.js`:
 ```javascript
-    <List title={'Users'} items={this.state.users}/>
+    ...
+    case GET_USERS:
+        return {
+            users: action.payload.users,
+            error: null
+        };
+    ...
+```
+
+## Task 5
+I `Container.js`:
+```javascript
+    componentDidMount() {
+        this.props.getAllUsers();
+    }
 ```
 
 ## Task 6
+I `List.js`:
 ```javascript
-    render() {
-        ...
-        {this.props.items.length > 0 && 
-            console.log("ITEMS", this.props.items)
-            this.props.items.map((item, index) => (
-                <li className="list-group-item" key={index}>{item.name}</li>
-            ))
-        }
-        ...
+    const mapStateToProps = (state) => {
+        return {
+            items: state.users.users
+        };
     }
 ```
 
 ## Task 7
+I `Container.js`:
 ```javascript
-    onKeyPressed = (e) => {
-		this.setState({
-			searchTerm: e.target.value
-		})
-	};
-```
-
-## Task 8
-```javascript
-    render() {
-        const filteredItems = this.filterListItemsBySearchTerm(this.state.searchTerm);
-        ...
-        {this.props.items.length > 0 && 
-            console.log("ITEMS", this.props.items)
-            filteredItems.map((item, index) => (
-                <li className="list-group-item" key={index}>{item.name}</li>
-            ))
-        }
-        ...
-    }
+    ...
+    <List title={'Users'} />
+    ...
 ```

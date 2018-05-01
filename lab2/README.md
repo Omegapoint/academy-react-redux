@@ -1,5 +1,9 @@
 # Lab 2
 
+## Starta applikationen
+Navigera till rotkatalogen `lab2`: `yarn install` följt av `yarn start`.
+
+## Uppgift
 1. Bekanta dig med hur applikationen är uppbyggt komponentmässigt. Utgå från `App.js`.
 2. Byt titel ("*Insert title") på `List`-komponenten genom att skicka in ett annat värde för rätt `prop`.
 3. Just nu går det inte att byta bakgrundfärg. Komponenten `App.js` har ett `state` för sidans bakgrundsfärg (`bgColor`). Använd callbacken från `BackgroundColorPicker` för att få färgväljaren att fungera. Hur sätts själva färgen?

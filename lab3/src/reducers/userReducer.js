@@ -1,15 +1,18 @@
-import { GET_USERS } from '../actions/userActions';
+import { GET_USERS, GET_USERS_ERROR } from '../actions/userActions';
 
 
 const initialState = {
-    users: []
+    users: [],
+    error: null
 };
 
 const userReducer = (state = initialState, action = {}) => {
     switch (action.type) {
-        case GET_USERS:
+        // TODO: Task 3 - handle the action from getAllUsers()
+        case GET_USERS_ERROR:
             return {
-                users: action.payload.users
+                users: [],
+                error: action.payload.error
             };
         default:
             return state;

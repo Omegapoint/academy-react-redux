@@ -8,9 +8,7 @@ import './Container.css';
 
 class Container extends Component {
 
-    componentDidMount() {
-        this.props.getAllUsers();
-    }
+    // TODO: Task 4 - get all users upon mounting the component
 
     render() {
         return (
@@ -22,18 +20,20 @@ class Container extends Component {
 					</p>
                 </div>
                 <BackgroundColorPicker onChange={() => { console.log("FOO") }} />
-                <List title={'Users'} items={[]} />
+                <List title={'Users'} items={[]}/>
             </div>
         );
     }
 }
 
+// Maps the aplication state directly to component props
 const mapStateToProps = (state) => {
 	return {
 		backgroundColor: state.background.bgColor
 	};
 }
 
+// Maps the action creators through dispatch directly to component props
 const mapDispatchToProps = (dispatch) => {
     return {
         getAllUsers: () => {
@@ -42,4 +42,5 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
+// Connects the component to the redux cycle
 export default connect(mapStateToProps, mapDispatchToProps)(Container);

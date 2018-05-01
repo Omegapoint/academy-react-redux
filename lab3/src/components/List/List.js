@@ -14,6 +14,10 @@ class List extends Component {
 		}
 	}
 
+	onItemClick = (userId) => {
+		console.log("onItemClick()", userId);
+	}
+
 	onKeyPressed = (e) => {
 		this.setState({
 			searchTerm: e.target.value
@@ -37,7 +41,7 @@ class List extends Component {
 					<ul className="list-group">
 						{this.props.items.length > 0 &&
 							filteredItems.map((item, index) => (
-								<li className="list-group-item" key={index}>{item.name}</li>
+								<li className="List-item list-group-item" key={index} onClick={this.onItemClick(item.id)}>{item.name}</li>
 							))
 						}
 					</ul>
@@ -48,9 +52,7 @@ class List extends Component {
 }
 
 const mapStateToProps = (state) => {
-	return {
-		items: state.users.users
-	};
+	// TODO: Task 5 - implement mapStateToProps
 }
 
 export default connect(mapStateToProps, null)(List);
