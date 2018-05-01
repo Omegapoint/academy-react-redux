@@ -8,8 +8,8 @@ class UserDetails extends Component {
         return (
             <div className="UserDetails">
                 {this.props.user &&
-                <div class="alert alert-info">
-                  <h4 class="alert-heading">{this.props.user.name}</h4>
+                <div className="alert alert-info">
+                  <h4 className="alert-heading">{this.props.user.name}</h4>
                   <hr/>
                   <p><b>Username: </b>{this.props.user.username}</p>
                   <p><b>Email: </b>{this.props.user.email}</p>

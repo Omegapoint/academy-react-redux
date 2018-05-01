@@ -18,8 +18,9 @@ class List extends Component {
 	}
 
 	onKeyPressed = (e) => {
-		// const searchTerm = e.target.value;
-		// TODO: Task 7. Implement callback logic.  
+		this.setState({
+			searchTerm: e.target.value
+		})
 	};
 
 	filterListItemsBySearchTerm = (searchTerm) => {
@@ -30,17 +31,17 @@ class List extends Component {
 	};
 
 	render() {
-		// TODO: Task 8: Set up filtering by declaring filteredItems.
-		// const filteredItems = ...
+		const filteredItems = this.filterListItemsBySearchTerm(this.state.searchTerm);
 		return (
 			<div className="List">
 				<h2 className="List-title">{this.props.title}</h2>
 				<SearchBar onKeyPressed={this.onKeyPressed}/>
-				{this.props.items.length === 0 ? (<div>Empty list...</div>) : (
+				{this.props.items.length === 0 ? (<div className="alert alert-warning">Empty list...</div>) : (
 					<ul className="list-group">
 						{this.props.items.length > 0 && 
-							// TODO: Task 6. Iterate over items and return <li>-tags.
-							console.log("ITEMS", this.props.items)
+							filteredItems.map((item, index) => (
+								<li className="list-group-item" key={index}>{item.name}</li>
+							))
 						}
 					</ul>
 				)}

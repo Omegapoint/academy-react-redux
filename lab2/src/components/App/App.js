@@ -20,8 +20,10 @@ class App extends Component {
 	}
 
 	changeBackgroundColor = (e) => {
-		// const color = e.target.value;
-		// TODO: Task 3 - change background color by setting state.
+        const color = e.target.value;
+		this.setState({
+			bgColor: color
+		})
 	};
 
 	render() {
@@ -34,7 +36,7 @@ class App extends Component {
 					</p>
 				</div>
 				<BackgroundColorPicker onChange={(this.changeBackgroundColor)}/>
-				<List title={/*TODO: Task 1*/'*Insert title'} items={/*TODO: Task 4 */[]}/>
+				<List title={'Users'} items={this.state.users}/>
 			</div>
 		);
 	}
