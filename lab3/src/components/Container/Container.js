@@ -3,10 +3,15 @@ import 'typeface-pacifico';
 import BackgroundColorPicker from '../BackgroundColorPicker/BackgroundColorPicker';
 import List from '../List/List';
 import { connect } from 'react-redux';
+import { getAllUsers } from '../../actions/userActions';
 
 import './Container.css';
 
 class Container extends Component {
+
+    componentDidMount() {
+        this.props.getAllUsers();
+    }
 
     render() {
         return (
@@ -30,4 +35,12 @@ const mapStateToProps = (state) => {
 	};
 }
 
-export default connect(mapStateToProps, null)(Container);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getAllUsers: () => {
+            dispatch(getAllUsers());
+        }
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Container);

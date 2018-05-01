@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import SearchBar from '../SearchBar/SearchBar';
+import { connect } from 'react-redux';
 
 import "./List.css";
 
 class List extends Component {
-
-	static defaultProps = {
-		items: []
-	};
 
 	constructor(props) {
 		super(props);
@@ -35,10 +32,10 @@ class List extends Component {
 		return (
 			<div className="List">
 				<h2 className="List-title">{this.props.title}</h2>
-				<SearchBar onKeyPressed={this.onKeyPressed}/>
-				{this.props.items.length === 0 ? (<div>Empty list...</div>) : (
+				<SearchBar onKeyPressed={this.onKeyPressed} />
+				{this.props.items.length === 0 ? (<div className="alert alert-warning">Empty list...</div>) : (
 					<ul className="list-group">
-						{this.props.items.length > 0 && 
+						{this.props.items.length > 0 &&
 							filteredItems.map((item, index) => (
 								<li className="list-group-item" key={index}>{item.name}</li>
 							))
@@ -50,8 +47,10 @@ class List extends Component {
 	}
 }
 
-List.propTypes = {
-	items: PropTypes.array
-};
+const mapStateToProps = (state) => {
+	return {
+		items: state.users.users
+	};
+}
 
-export default List;
+export default connect(mapStateToProps, null)(List);
