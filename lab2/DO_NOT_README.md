@@ -1,11 +1,13 @@
 # Lab 2 Solutions
 
 ## Task 2
+I `App.js`:
 ```javascript
     <List title={'Users'} items={/*TODO: Task 4 */[]}/>
 ```
 
 ## Task 3
+I `App.js`:
 ```javascript
     changeBackgroundColor = (e) => {
         const color = e.target.value;
@@ -16,11 +18,13 @@
 ```
 
 ## Task 4
+I `App.js`:
 ```javascript
     <List title={'Users'} items={this.state.users}/>
 ```
 
 ## Task 6
+I `List.js`:
 ```javascript
     render() {
         ...
@@ -35,6 +39,7 @@
 ```
 
 ## Task 7
+I `List.js`:
 ```javascript
     onKeyPressed = (e) => {
 		this.setState({
@@ -44,6 +49,7 @@
 ```
 
 ## Task 8
+I `List.js`:
 ```javascript
     render() {
         const filteredItems = this.filterListItemsBySearchTerm(this.state.searchTerm);

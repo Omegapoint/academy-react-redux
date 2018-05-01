@@ -1,6 +1,7 @@
 import { SET_BG_COLOR } from "../actions/backgroundActions";
 
 const initialState = {
+    // TODO: Task 2
     bgColor: 'lavender'
 };
 

@@ -1,7 +1,7 @@
 # Lab 2
 
-## Starta applikationen
-Navigera till rotkatalogen `lab2`: `yarn install` följt av `yarn start`.
+## Starta applikationen för Lab 2
+Från projektroten: `$ cd lab2`, `$ yarn install` följt av `$ yarn start`.
 
 ## Uppgift
 1. Bekanta dig med hur applikationen är uppbyggt komponentmässigt. Utgå från `App.js`.

@@ -7,7 +7,7 @@ export const getAllUsers = () => {
     return dispatch => {
         getUsers()
         .then((users) => {
-            // TODO: Task 2 - dispatch asych action. 
+            // TODO: Task 3 - Dispatch asych action. getUsers is a function from out api that returns a promise. 
         })
         .catch((e) => {
             dispatch({

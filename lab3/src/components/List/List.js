@@ -15,7 +15,7 @@ class List extends Component {
 	}
 
 	onItemClick = (userId) => {
-		console.log("onItemClick()", userId);
+		console.log("Clicked on user", userId);
 	}
 
 	onKeyPressed = (e) => {
@@ -41,7 +41,7 @@ class List extends Component {
 					<ul className="list-group">
 						{this.props.items.length > 0 &&
 							filteredItems.map((item, index) => (
-								<li className="List-item list-group-item" key={index} onClick={this.onItemClick(item.id)}>{item.name}</li>
+								<li className="List-item list-group-item" key={index} onClick={(e) => this.onItemClick(item.id)}>{item.name}</li>
 							))
 						}
 					</ul>
@@ -52,7 +52,7 @@ class List extends Component {
 }
 
 const mapStateToProps = (state) => {
-	// TODO: Task 5 - implement mapStateToProps
+	// TODO: Task 6 - Implement mapStateToProps
 }
 
 export default connect(mapStateToProps, null)(List);
