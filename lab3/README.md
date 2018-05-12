@@ -17,7 +17,7 @@ Från projektroten: `$ cd lab3`, `$ yarn install` följt av `$ yarn start`. Gå 
 Nu är det dags att sätta allt du lärt dig hittills på prov. Gör så långt du hinner. Uppgiften är att du ska skapa en egen komponent och visa detaljerad användarinformation i denna. I `List.js` finns det nu en callback, `onClick`, som kommer att skicka med ett id för användaren som klickades på. I `api.js` finns det en funktion som hämtar användardata basert på ett id.
 
 För att lösa uppgiften behöver du:
-- Skapa en ny komponent `<UserDetials>` (eller liknande namn) och använda denna i `Container.js`.
+- Skapa en ny komponent `<UserDetails>` (eller liknande namn) och använda denna i `Container.js`.
 - `<UserDetails>` behöver rendera ut JSX för detaljerad användardata.
 - Skapa en ny action creator i `userActions.js` som tar in ett id och gör ett asynkront anrop mot `api.js` för att hämta ut detlajerad användardata.
 - Utöka state för `userReducers.js` till att även innehålla detaljerad användardata och handera en ny typ av inkommade action.
