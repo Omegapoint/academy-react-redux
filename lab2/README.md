@@ -1,7 +1,7 @@
 # Lab 2
 
 ## Starta applikationen för Lab 2
-Från projektroten: `$ cd lab2`, `$ yarn install` följt av `$ yarn start`. Gå sedan in på http://localhost:3000/ för att öppna upp applikationen. 
+Från projektroten: `$ cd lab2`, `$ npm install` följt av `$ npm start`. Gå sedan in på http://localhost:3000/ för att öppna upp applikationen. 
 
 ## Uppgift
 1. Bekanta dig med hur applikationen är uppbyggt komponentmässigt. Utgå från `App.js`.
