@@ -1,7 +1,7 @@
 # Lab 3
 
 ## Starta applikationen för Lab 3
-Från projektroten: `$ cd lab3`, `$ yarn install` följt av `$ yarn start`. Gå sedan in på http://localhost:3000/ för att öppna upp applikationen.
+Från projektroten: `$ cd lab3`, `$ npm install` följt av `$ npm start`. Gå sedan in på http://localhost:3000/ för att öppna upp applikationen.
 
 ## Del 1 - Redux-snurran
 1. Ta en till på befintliga komponenter och hur Redux-snurran är implementerad för att välja bakgrund. Ladda ner och använd [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) för detta. 

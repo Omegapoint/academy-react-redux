@@ -30,7 +30,7 @@ class App extends Component {
 				<div className="App-header">
 					<p>Lab 2</p>
 					<p className="App-header-description">
-						👩‍💻 Öppna upp README.md och följ instruktionerna 👨‍💻
+						<span role="img" aria-label="female technologist">👩‍💻</span> Öppna upp README.md och följ instruktionerna <span role="img" aria-label="male technologist">👨‍💻</span>
 					</p>
 				</div>
 				<BackgroundColorPicker onChange={(this.changeBackgroundColor)}/>
