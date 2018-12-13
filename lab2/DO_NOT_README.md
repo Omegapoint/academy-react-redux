@@ -29,7 +29,6 @@ I `List.js`:
     render() {
         ...
         {this.props.items.length > 0 && 
-            console.log("ITEMS", this.props.items)
             this.props.items.map((item, index) => (
                 <li className="list-group-item" key={index}>{item.name}</li>
             ))
@@ -55,7 +54,6 @@ I `List.js`:
         const filteredItems = this.filterListItemsBySearchTerm(this.state.searchTerm);
         ...
         {this.props.items.length > 0 && 
-            console.log("ITEMS", this.props.items)
             filteredItems.map((item, index) => (
                 <li className="list-group-item" key={index}>{item.name}</li>
             ))

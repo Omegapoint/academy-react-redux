@@ -16,5 +16,5 @@ Från projektroten: `$ cd lab2`, `$ npm install` följt av `$ npm start`. Gå se
 
 ## Jag har tid över, vad gör jag nu?
 1. Hjälp en vän.
-2. Implementera en logik som visar upp detaljerad användarinformation då man klickar på en av användarna i listan.
+2. Utöka liskomponenten till att innehålla lite mer detaljerad användarinformation för varje item i listan.
 3. Ta en kaffe ☕️
