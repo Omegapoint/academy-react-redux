@@ -1,9 +1,9 @@
 # Modern Webbutveckling med React och Redux
 
-## Om workshopen
+## Om kursen
 Du som deltar kommer få chansen att testa på att jobba med en modern teknikstack för webben baserad på JavaScript-biblioteket React och statehanteringssystemet Redux, två sylvassa verktyg att bära med sig verktygslådan! Vi kommer att bygga ett projekt tillsammans från ax till limpa i vilket vi introducerar teknikstacken en del i taget. Har du velat testa på React och Redux sedan tidigare, men inte tagit första steget? Vill du veta mer om dom verktyg som vi webbutvecklare jobbar med till vardags? Här har du din chans!
  
-Observera att det här i första hand inte är en workshop för dig som jobbar med nämna tekniker till vardags, utan mer av en grundlig introduktion för dig som inte testat på det tidigare.
+Observera att det här i första hand inte är en kurs för dig som jobbar med nämna tekniker till vardags, utan mer av en grundlig introduktion för dig som inte testat på det tidigare.
 
 ## Förberedelser
 - Det är fördelaktigt om man installerat Node i förväg. Detta går att få tag i på https://nodejs.org/en/ eller via homebrew om du sitter på en Mac. Du behöver ha version 8.10.0 eller senare installerat för att allt ska flyta på så smidigt som möjligt.
