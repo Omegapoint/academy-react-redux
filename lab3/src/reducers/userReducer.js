@@ -1,8 +1,8 @@
-import { USERS_RECEIVED, GET_USERS_ERROR } from '../actions/userActions';
+import {USERS_RECEIVED, GET_USERS_ERROR} from '../actions/userActions';
 
 const initialState = {
-    users: [],
-    error: null
+  all: [],
+  error: null
 };
 
 const userReducer = (state = initialState, action = {}) => {

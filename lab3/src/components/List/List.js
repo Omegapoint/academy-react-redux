@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import SearchBar from '../SearchBar/SearchBar';
 import {connect} from 'react-redux';
 
@@ -54,7 +53,9 @@ class List extends Component {
 }
 
 const mapStateToProps = (state) => {
-  // TODO: Task 6 - Implement mapStateToProps
+  return {
+    items: [] // TODO: Task 6 - Implement mapStateToProps
+  } 
 };
 
 export default connect(mapStateToProps, null)(List);
