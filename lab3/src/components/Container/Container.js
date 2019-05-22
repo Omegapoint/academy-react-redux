@@ -37,12 +37,8 @@ const mapStateToProps = (state) => {
 };
 
 // Maps the action creators through dispatch directly to component props
-const mapDispatchToProps = (dispatch) => {
-  return {
-    getAllUsers: () => {
-      dispatch(getAllUsers());
-    }
-  }
+const mapDispatchToProps = {
+  getAllUsers: getAllUsers
 };
 
 // Connects the component to the redux cycle

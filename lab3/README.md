@@ -5,7 +5,7 @@ Från projektroten: `$ cd lab3`, `$ npm install` följt av `$ npm start`. Gå se
 
 ## Del 1 - Redux-snurran
 1. Ta en till på befintliga komponenter och hur Redux-snurran är implementerad för att välja bakgrund. Ladda ner och använd [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) för detta. 
-2. Bakgrundsfärgen är satt till `lavender` från början. Hur sätts den? Byt default från `lavender` till `gold`. Ladda om sidan och se så att det fungerar.
+2. Bakgrundsfärgen är satt till `lavender` från början. Hur sätts den? Byt default från `lavender` till `gold`. Ladda om sidan och se så att det fungerar. _Hint: Detta görs i en reducer_
 3. Användarna visas inte i listan just nu. Börja med att dispatcha ett action när användare har hämtats asynkront i `userActions`.
 4. När vi har dispatchat en action måste vi hantera den i våra reducers. Öppna `userReducers.js` och stoppa in resultatet från din nya action i applikationens state.
 5. I `Container.js` har vi nu tillgång till applikationens state och dipatches tack vare `connect()`. Vi vill här hämta alla användare när componenten mountas. Implementera detta.    
