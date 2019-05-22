@@ -56,7 +56,7 @@ class List extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    items: state.users.users
+    items: state.users.all
   };
 }
 

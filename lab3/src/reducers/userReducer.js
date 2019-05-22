@@ -1,31 +1,31 @@
-import {GET_USERS, GET_USERS_ERROR, GET_USER, GET_USER_ERROR} from '../actions/userActions';
+import {USERS_RECEIVED, GET_USERS_ERROR, USER_RECEIVED, GET_USER_ERROR} from '../actions/userActions';
 
 
 const initialState = {
-  users: [],
+  all: [],
   user: null,
   error: null
 };
 
 const userReducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case GET_USERS:
+    case USERS_RECEIVED:
       return {
         ...state,
-        users: action.payload.users,
+        all: action.payload,
         error: null
       }
-    case GET_USER:
+    case USER_RECEIVED:
       return {
         ...state,
-        user: action.payload.user,
+        user: action.payload,
         error: null
       }
     case GET_USERS_ERROR:
     case GET_USER_ERROR:
       return {
         ...state,
-        users: [],
+        all: [],
         error: action.payload.error
       };
     default:
