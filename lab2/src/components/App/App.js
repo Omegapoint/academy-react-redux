@@ -14,7 +14,9 @@ class App extends Component {
   componentDidMount() {
     getUsers().then(users => {
       this.setState(() => {
-        return {users}
+        return {
+          users: users
+        }
       })
     })
   }
