@@ -38,9 +38,9 @@ class List extends Component {
           <SearchBar onKeyPressed={this.onKeyPressed}/>
           {this.props.items.length === 0 ? (<div>Empty list...</div>) : (
               <ul className="list-group">
-                {this.props.items.length > 0 &&
-                // TODO: Task 6. Iterate over items and return <li>-tags.
-                console.log("ITEMS", this.props.items)
+                {
+                  // TODO: Task 6. Iterate over items and return <li>-tags.
+                  console.log("ITEMS", this.props.items)
                 }
               </ul>
           )}
