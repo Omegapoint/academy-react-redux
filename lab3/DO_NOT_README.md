@@ -15,7 +15,7 @@ I `userActions.js`:
 ```javascript
     .then((users) => {
         dispatch({
-            type: USERS_RECEIVED,
+            type: BLAHA,
             payload: {
                 users
             }
@@ -27,7 +27,7 @@ I `userActions.js`:
 I `userReducers.js`:
 ```javascript
     ...
-    case USERS_RECEIVED:
+    case BLAHA:
         return {
             users: action.payload.users,
             error: null
