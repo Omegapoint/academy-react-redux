@@ -35,7 +35,7 @@ class List extends Component {
     return (
         <div className="List">
           <h2 className="List-title">{this.props.title}</h2>
-          <SearchBar onKeyPressed={this.onKeyPressed}/>
+          <SearchBar value={this.state.searchTerm} onKeyPressed={this.onKeyPressed}/>
           {this.props.items.length === 0 ? (<div>Empty list...</div>) : (
               <ul className="list-group">
                 {
