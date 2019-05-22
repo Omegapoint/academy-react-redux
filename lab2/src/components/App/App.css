@@ -1,27 +1,31 @@
 #root {
-  background: whitesmoke;
+    background: whitesmoke;
 }
 
 .App {
-  padding: 25px 15px 25px 15px;
-  border: 2px solid gray;
-  min-height: 250px;
+    padding: 25px 15px 25px 15px;
+    border: 2px solid gray;
+    min-height: 250px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-  font-size: 42px;
-  text-align: center;
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+    font-size: 42px;
+    text-align: center;
 }
 
 .App-header-description {
-  font-size: 18px;
+    font-size: 18px;
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Container from '../Container/Container';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 import configureStore from '../../store';
 
 import './App.css';
@@ -10,13 +10,13 @@ const store = configureStore(preloadedState);
 
 class App extends Component {
 
-	render() {
-		return (
-			<Provider store={store}>
-				<Container />
-			</Provider>
-		);
-	}
+  render() {
+    return (
+        <Provider store={store}>
+          <Container/>
+        </Provider>
+    );
+  }
 }
 
 export default App;

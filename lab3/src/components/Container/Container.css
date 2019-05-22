@@ -4,7 +4,7 @@
     border: 2px solid gray;
     min-height: 250px;
 }
-  
+
 .Container-header {
     background-color: #222;
     height: 150px;
@@ -13,7 +13,7 @@
     font-size: 42px;
     text-align: center;
 }
-  
+
 .Container-header-description {
     font-size: 18px;
 }
