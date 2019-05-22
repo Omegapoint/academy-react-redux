@@ -1,5 +1,4 @@
-import { GET_USERS, GET_USERS_ERROR } from '../actions/userActions';
-
+import { USERS_RECEIVED, GET_USERS_ERROR } from '../actions/userActions';
 
 const initialState = {
     users: [],
