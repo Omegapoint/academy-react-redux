@@ -16,9 +16,7 @@ I `userActions.js`:
     .then((users) => {
         dispatch({
             type: USERS_RECEIVED,
-            payload: {
-                users
-            }
+            payload: users
         })
     })
 ```
@@ -29,7 +27,7 @@ I `userReducers.js`:
     ...
     case USERS_RECEIVED:
         return {
-            users: action.payload.users,
+            all: action.payload,
             error: null
         };
     ...
@@ -48,7 +46,7 @@ I `List.js`:
 ```javascript
     const mapStateToProps = (state) => {
         return {
-            items: state.users.users
+            items: state.users.all
         };
     }
 ```
