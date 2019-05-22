@@ -10,7 +10,7 @@ const userReducer = (state = initialState, action = {}) => {
         // TODO: Task 4 - Handle the action received from getAllUsers()
         case GET_USERS_ERROR:
             return {
-                users: [],
+                all: [],
                 error: action.payload.error
             };
         default:
