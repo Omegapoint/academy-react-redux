@@ -4,10 +4,10 @@
   "private": true,
   "dependencies": {
     "lodash": "^4.17.5",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-redux": "^5.0.7",
-    "react-scripts": "^2.1.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^5.1.1",
+    "react-scripts": "3.0.1",
     "redux": "^4.0.0",
     "redux-thunk": "^2.2.0",
     "typeface-lato": "^0.0.54"
@@ -19,7 +19,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "redux-devtools-extension": "^2.13.2",
+    "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6"
   },
   "browserslist": [
