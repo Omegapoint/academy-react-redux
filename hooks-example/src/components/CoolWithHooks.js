@@ -39,8 +39,7 @@ const CoolWithHooks = props => {
         <h4>Mouse coords - X: {mouseCoords.x}, Y: {mouseCoords.y}</h4>
         <button onClick={() => setCount(count + 1)}>Increment counter</button>
         <p>Class button was clicked {count} {count === 1 ? 'time' : 'times'}</p>
-
-
+        
         <button onClick={() => dispatch({ type: 'increment'})}>Inc</button>
         <button onClick={() => dispatch({ type: 'decrement'})}>Dec</button>
         <h3>Reduced state: {state.count}</h3>
