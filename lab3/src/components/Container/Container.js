@@ -29,7 +29,7 @@ class Container extends Component {
   }
 }
 
-// Maps the aplication state directly to component props
+// Maps the application state directly to component props
 const mapStateToProps = (state) => {
   return {
     backgroundColor: state.background.bgColor

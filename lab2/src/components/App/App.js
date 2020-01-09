@@ -37,7 +37,7 @@ class App extends Component {
             </p>
           </div>
           <BackgroundColorPicker onChange={(this.changeBackgroundColor)}/>
-          <List title={/*TODO: Task 1*/'*Insert title'} items={/*TODO: Task 4 */[]}/>
+          <List title={/*TODO: Task 2*/'*Insert title'} items={/*TODO: Task 4 */[]}/>
         </div>
     );
   }

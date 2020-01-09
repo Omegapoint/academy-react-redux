@@ -39,7 +39,8 @@ class List extends Component {
           {this.props.items.length === 0 ? (<div>Empty list...</div>) : (
               <ul className="list-group">
                 {
-                  // TODO: Task 6. Iterate over items and return <li>-tags.
+                  // TODO: Task 6. Map (see react-examples.md if stuck :D) over items and return <li>-tags.
+                  // <li className="list-group-item">A list item</li>
                   console.log("ITEMS", this.props.items)
                 }
               </ul>
