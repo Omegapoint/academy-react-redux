@@ -5,7 +5,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import "./List.css";
 
 const List = ({ items = [], title }) => {
-  const [searchTerm, getSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   const onKeyPressed = (e) => {
     // const searchTerm = e.target.value;
