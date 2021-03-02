@@ -3,15 +3,19 @@
 ## Del 1
 
 ### Task 2
+
 I `backgroundReducers.js`:
+
 ```javascript
-    const initialState = {
-    bgColor: 'gold'
+const initialState = {
+  bgColor: "gold",
 };
 ```
 
 ### Task 3
+
 I `userActions.js`:
+
 ```javascript
     .then((users) => {
         dispatch({
@@ -22,7 +26,9 @@ I `userActions.js`:
 ```
 
 ### Task 4
+
 I `userReducers.js`:
+
 ```javascript
     ...
     case USERS_RECEIVED:
@@ -34,30 +40,23 @@ I `userReducers.js`:
 ```
 
 ### Task 5
+
 I `Container.js`:
+
 ```javascript
-    componentDidMount() {
-        this.props.getAllUsers();
-    }
+useEffect(() => {
+  dispatch(getAllUsers());
+}, []);
 ```
 
 ### Task 6
-I `List.js`:
-```javascript
-    const mapStateToProps = (state) => {
-        return {
-            items: state.users.all
-        };
-    }
-```
 
-### Task 7
-I `Container.js`:
+I `List.js`:
+
 ```javascript
-    ...
-    <List title={'Users'} />
-    ...
+const users = useSelector((state) => state.users.all);
 ```
 
 ## Del 2
+
 Lösninsförslag till del två går att se genom att byta branch till `solutions`. Här finns även alla uppgifter till alla labbar lösta.
