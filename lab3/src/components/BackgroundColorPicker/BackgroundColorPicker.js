@@ -1,56 +1,30 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {setBackgroundColor} from '../../actions/backgroundActions';
-
+import React from "react";
+import { useDispatch } from "react-redux";
+import { setBackgroundColor } from "../../actions/backgroundActions";
+import colors from "./colors";
 import "./BackgroundColorPicker.css";
 
-class BackgroundColorPicker extends Component {
+const BackgroundColorPicker = () => {
+  const dispatch = useDispatch();
 
-  colors = [
-    {
-      hex: 'lavender',
-      name: 'lavender'
-    },
-    {
-      hex: 'gold',
-      name: 'gold'
-    },
-    {
-      hex: '#f48c42',
-      name: '🎃'
-    },
-    {
-      hex: 'rebeccapurple',
-      name: 'Beautiful purple'
-    }
-  ];
-
-  handleOnChange = (e) => {
-    this.props.setBackgroundColor(e.target.value);
+  const handleOnChange = (e) => {
+    dispatch(setBackgroundColor(e.target.value));
   };
 
-  render() {
-    return (
-        <div className="BackgroundColorPicker">
-          <h5>Välj bakgrundsfärg</h5>
-          <select className="custom-select" onChange={this.handleOnChange}>
-            {this.colors.map((color, index) => {
-              return (
-                  <option key={index} value={color.hex}>{color.name}</option>
-              )
-            })}
-          </select>
-        </div>
-    );
-  }
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setBackgroundColor: (color) => {
-      dispatch(setBackgroundColor(color));
-    }
-  };
+  return (
+    <div className="BackgroundColorPicker">
+      <h5>Välj bakgrundsfärg</h5>
+      <select className="custom-select" onChange={handleOnChange}>
+        {colors.map((color) => {
+          return (
+            <option key={`color-${color.name}`} value={color.hex}>
+              {color.name}
+            </option>
+          );
+        })}
+      </select>
+    </div>
+  );
 };
 
-export default connect(null, mapDispatchToProps)(BackgroundColorPicker);
+export default BackgroundColorPicker;
