@@ -24,12 +24,12 @@ const List = ({ items = [], title }) => {
       <h2 className="List-title">{title}</h2>
       <SearchBar value={searchTerm} onKeyPressed={onKeyPressed} />
       {items.length === 0 ? (
-        <div>Empty list...</div>
+        <div className="alert alert-warning">Empty list...</div>
       ) : (
         <ul className="list-group">
           {
             // TODO: Task 6. Map (see react-examples.md if stuck :D) over items and return <li>-tags.
-            // <li className="list-group-item">A list item</li>
+            // <li className="list-group-item" key={item.id}>*A list item*</li>
             console.log("ITEMS", items)
           }
         </ul>
