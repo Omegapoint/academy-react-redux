@@ -4,8 +4,11 @@ import { connect } from "react-redux";
 
 import "./List.css";
 
-const List = ({ items, title }) => {
+const List = ({ title }) => {
   const [searchTerm, setSearchTerm] = useState("");
+
+  // Task 7: Get users from store
+  const users = [];
 
   const onItemClick = (userId) => {
     console.log("Clicked on user", userId);
@@ -15,23 +18,23 @@ const List = ({ items, title }) => {
     setSearchTerm(e.target.value);
   };
 
-  const filterListItemsBySearchTerm = (searchTerm) =>
-    items.filter((item) =>
-      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  const filterUsersBySearchTerm = (searchTerm) =>
+    users.filter((user) =>
+      user.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-  const filteredItems = filterListItemsBySearchTerm(searchTerm);
+  const filteredUsers = filterUsersBySearchTerm(searchTerm);
 
   return (
     <div className="List">
       <h2 className="List-title">{title}</h2>
       <SearchBar onKeyPressed={onKeyPressed} />
-      {filteredItems.length === 0 ? (
+      {filteredUsers.length === 0 ? (
         <div className="alert alert-warning">Empty list...</div>
       ) : (
         <ul className="list-group">
-          {filteredItems.length > 0 &&
-            filteredItems.map((item) => (
+          {filteredUsers.length > 0 &&
+            filteredUsers.map((item) => (
               <li
                 className="List-item list-group-item"
                 key={item.id}
@@ -46,10 +49,4 @@ const List = ({ items, title }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    items: [], // TODO: Task 6 - Implement mapStateToProps
-  };
-};
-
-export default connect(mapStateToProps, null)(List);
+export default List;

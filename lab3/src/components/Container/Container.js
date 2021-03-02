@@ -35,7 +35,7 @@ const Container = () => {
           console.log("FOO");
         }}
       />
-      <List title={"Users"} items={[]} />
+      <List title={"Users"} />
     </div>
   );
 };
