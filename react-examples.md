@@ -6,7 +6,9 @@
 //MyComponent.js
 import React from "react";
 
-const MyComponent = ({ title, content }) => {
+// const MyComponent = ({ title, content }) => {...
+const MyComponent = (props) => {
+  const { title, content } = props;
   return (
     <div>
       <h2>{title}</h2>
@@ -58,6 +60,31 @@ const ComponentWithState = () => {
       <p>{buttonText}</p>
     </div>
   );
+};
+
+export default ComponentWithState;
+```
+
+## useEffect
+
+```javascript
+import React, { useEffect } from "react";
+
+const UseEffectComponent = () => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  }, []);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
 };
 
 export default ComponentWithState;
