@@ -6,7 +6,9 @@
 //MyComponent.js
 import React from "react";
 
-const MyComponent = ({ title, content }) => {
+// const MyComponent = ({ title, content }) => {...
+const MyComponent = (props) => {
+  const { title, content } = props;
   return (
     <div>
       <h2>{title}</h2>
