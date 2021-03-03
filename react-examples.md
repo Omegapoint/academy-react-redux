@@ -112,24 +112,22 @@ export default UserEventComponent;
 ## Map + Keys
 
 ```javascript
-    import React from 'react';
+import React from "react";
 
-    const ComponentWithList = (items) => {
-            return (
-                <h1>Awesome people list</h1>
-                <ul>
-                    {items.map(item => {
-                        return (
-                            <li key={item.id}>
-                                {item.name}
-                            </li>
-                        )
-                    })}
-                </ul>
-            );
-    }
+const ComponentWithList = ({ items }) => {
+  return (
+    <>
+      <h1>Awesome people list</h1>
+      <ul>
+        {items.map((item) => {
+          return <li key={item.id}>{item.name}</li>;
+        })}
+      </ul>
+    </>
+  );
+};
 
-    export default ComponentWithList;
+export default ComponentWithList;
 ```
 
 ```javascript
