@@ -68,7 +68,7 @@ export default ComponentWithState;
 ## useEffect
 
 ```javascript
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const UseEffectComponent = () => {
   const [count, setCount] = useState(0);
@@ -76,7 +76,7 @@ const UseEffectComponent = () => {
   useEffect(() => {
     // Update the document title using the browser API
     document.title = `You clicked ${count} times`;
-  }, []);
+  }, [count]);
 
   return (
     <div>
@@ -85,6 +85,7 @@ const UseEffectComponent = () => {
         Click me
       </button>
     </div>
+  );
 };
 
 export default ComponentWithState;
