@@ -26,7 +26,8 @@ Det finns Ã¤ven en branch i detta projekt, `solutions`, i vilken alla labbarna Ã
 
 ## Vi skapade materialet!
 - Mathias Bergqvist (mathias.bergqvist@omegapoint.se)
-- Robert Novo (robert.novo@omegapoint.se) 
+- Robert Novo (robert.novo@omegapoint.se)
+- Anton Jernberg (anton.jernberg@omegapoint.se)
 
 
  
