@@ -12,11 +12,11 @@ Från projektroten: `$ cd lab2`, `$ npm install` följt av `$ npm start`. Gå se
 4. Skicka in en lista med användare som `prop` till komponenten `List`. Hur hämtas listan med användare?
 5. Användarna syns fortfarande inte listade. Använd **React Devtools Extension** för att verifiera att komponenten `List` har fått in en lista med användare.
 6. Rendera ut lista med användare i `return()` i komponenten `List.js`. Använd `.map(...)` för detta (hint: kika i `BackgroundColorPicker` om du kör fast).
-7. Nu vill vi kunna filtera listan. I `List.js` använader vi komponenten `SearchBar` som tar en callback, `onKeyPressed`. Vad vill vi göra då? Implementera `onKeyPressed()` i `List.js`!
+7. Nu vill vi kunna filtrera listan. I `List.js` använder vi komponenten `SearchBar` som tar en callback, `onKeyPressed`. Vad vill vi göra då? Implementera `onKeyPressed()` i `List.js`!
 8. Nu när `List.js` känner till söktermen vill vi filtrera listan av användare. Det finns en metod `filterListItemsBySearchTerm()` som gör just detta. Tilldela konstanten `filteredItems` och iterera över denna istället för `items`.
 
 ## Jag har tid över, vad gör jag nu?
 
 1. Hjälp en vän.
-2. Utöka liskomponenten till att innehålla lite mer detaljerad användarinformation för varje item i listan.
+2. Utöka List-komponenten till att innehålla lite mer detaljerad användarinformation för varje item i listan.
 3. Ta en kaffe ☕️
