@@ -18,7 +18,7 @@ I `userActions.js`:
 
 ```javascript
     .then((users) => {
-        dispatch({
+        useDispatch({
             type: USERS_RECEIVED,
             payload: users
         })
@@ -59,4 +59,4 @@ const users = useSelector((state) => state.users.all);
 
 ## Del 2
 
-Lösninsförslag till del två går att se genom att byta branch till `solutions`. Här finns även alla uppgifter till alla labbar lösta.
+Lösningsförslag till del två går att se genom att byta branch till `solutions`. Här finns även alla uppgifter till alla labbar lösta.

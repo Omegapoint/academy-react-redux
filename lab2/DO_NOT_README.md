@@ -34,7 +34,7 @@ I `List.js`:
 ```javascript
     render() {
         ...
-        {items.length > 0 &&
+        {
             items.map((item, index) => (
                 <li className="list-group-item" key={index}>{item.name}</li>
             ))
@@ -60,7 +60,7 @@ I `List.js`:
 
 ```javascript
     render() {
-        const filteredItems = this.filterListItemsBySearchTerm(this.state.searchTerm);
+        const filteredItems = this.filterListItemsBySearchTerm(searchTerm);
         ...
         {filteredItems.length > 0 &&
             filteredItems.map((item, index) => (

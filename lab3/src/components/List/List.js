@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
-import { connect } from "react-redux";
 
 import "./List.css";
 
@@ -33,7 +32,7 @@ const List = ({ title }) => {
         <div className="alert alert-warning">Empty list...</div>
       ) : (
         <ul className="list-group">
-          {filteredUsers.length > 0 &&
+          {
             filteredUsers.map((item) => (
               <li
                 className="List-item list-group-item"
