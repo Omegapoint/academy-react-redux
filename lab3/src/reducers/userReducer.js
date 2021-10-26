@@ -7,7 +7,11 @@ const initialState = {
 
 const userReducer = (state = initialState, action = {}) => {
     switch (action.type) {
-        // TODO: Task 4 - Handle the action received from getAllUsers()
+        case USERS_RECEIVED:
+            return {
+                all: action.payload,
+                error: null
+            }
         case GET_USERS_ERROR:
             return {
                 all: [],
