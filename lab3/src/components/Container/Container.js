@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import BackgroundColorPicker from "../BackgroundColorPicker/BackgroundColorPicker";
+import UserDetails from "../UserDetails/UserDetails";
 import List from "../List/List";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllUsers } from "../../actions/userActions";
@@ -36,6 +37,7 @@ const Container = () => {
           console.log("FOO");
         }}
       />
+      <UserDetails />
       <List title={"Users"} />
     </div>
   );

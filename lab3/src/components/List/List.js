@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 
 import "./List.css";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {getUserById} from "../../actions/userActions";
 
 const List = ({ title }) => {
+  const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = useState("");
 
   const users = useSelector((state) => state.users.all);
 
   const onItemClick = (userId) => {
-    console.log("Clicked on user", userId);
+    dispatch(getUserById(userId));
   };
 
   const onKeyPressed = (e) => {

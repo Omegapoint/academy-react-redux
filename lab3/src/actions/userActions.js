@@ -1,7 +1,11 @@
 import { getUsers } from '../api';
+import { getUser } from '../api';
 
 export const USERS_RECEIVED = "USERS_RECEIVED";
 export const GET_USERS_ERROR = "GET_USERS_ERROR";
+
+export const USER_RECEIVED = "USER_RECEIVED";
+export const GET_USER_ERROR = "GET_USER_ERROR";
 
 export const getAllUsers = () => {
     /*
@@ -26,5 +30,23 @@ export const getAllUsers = () => {
                 }
             });
         })
+    };
+};
+
+export const getUserById = (userId) => {
+    return dispatch => {
+        getUser(userId)
+            .then((user) => {
+                dispatch({
+                    type: USER_RECEIVED,
+                    payload: user
+                });
+            })
+            .catch((e) => {
+                dispatch({
+                    type: GET_USER_ERROR,
+                    payload: e
+                });
+            })
     };
 };
