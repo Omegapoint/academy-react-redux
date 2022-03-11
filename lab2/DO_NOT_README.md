@@ -2,7 +2,7 @@
 
 ## Task 2
 
-I `App.js`:
+I `App.jsx`:
 
 ```javascript
 <List title={"Users"} items={/*TODO: Task 4 */ []} />
@@ -10,7 +10,7 @@ I `App.js`:
 
 ## Task 3
 
-I `App.js`:
+I `App.jsx`:
 
 ```javascript
 const changeBackgroundColor = (e) => {
@@ -21,7 +21,7 @@ const changeBackgroundColor = (e) => {
 
 ## Task 4
 
-I `App.js`:
+I `App.jsx`:
 
 ```javascript
 <List title={"Users"} items={users} />
@@ -29,7 +29,7 @@ I `App.js`:
 
 ## Task 6
 
-I `List.js`:
+I `List.jsx`:
 
 ```javascript
     render() {
@@ -45,7 +45,7 @@ I `List.js`:
 
 ## Task 7
 
-I `List.js`:
+I `List.jsx`:
 
 ```javascript
 const onKeyPressed = (e) => {
@@ -56,7 +56,7 @@ const onKeyPressed = (e) => {
 
 ## Task 8
 
-I `List.js`:
+I `List.jsx`:
 
 ```javascript
     render() {

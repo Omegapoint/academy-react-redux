@@ -16,6 +16,6 @@
     2. Vilka paket är installerade?
     3. Vilka beroenden har React?
     4. Vilka komponenter existerar från början? ___Hint: React Devtools Extension___ 
-    5. Ersätt texten "Edit src/App.js and save to reload." med "Peace, Love & OP Web". Du behöver INTE kompilera om vid ändringar!
+    5. Ersätt texten "Edit src/App.jsx and save to reload." med "Peace, Love & OP Web". Du behöver INTE kompilera om vid ändringar!
     6. Lek runt lite! 
    

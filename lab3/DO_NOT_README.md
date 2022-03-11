@@ -41,7 +41,7 @@ I `userReducers.js`:
 
 ### Task 5
 
-I `Container.js`:
+I `Container.jsx`:
 
 ```javascript
 useEffect(() => {
@@ -51,7 +51,7 @@ useEffect(() => {
 
 ### Task 6
 
-I `List.js`:
+I `List.jsx`:
 
 ```javascript
 const users = useSelector((state) => state.users.all);
