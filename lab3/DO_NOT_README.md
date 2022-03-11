@@ -18,7 +18,7 @@ I `userActions.js`:
 
 ```javascript
     .then((users) => {
-        useDispatch({
+        dispatch({
             type: USERS_RECEIVED,
             payload: users
         })

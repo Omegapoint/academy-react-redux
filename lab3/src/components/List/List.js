@@ -6,7 +6,7 @@ import "./List.css";
 const List = ({ title }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Task 7: Get users from store
+  // Task 6: Get users from store
   const users = [];
 
   const onItemClick = (userId) => {
@@ -32,16 +32,15 @@ const List = ({ title }) => {
         <div className="alert alert-warning">Empty list...</div>
       ) : (
         <ul className="list-group">
-          {
-            filteredUsers.map((item) => (
-              <li
-                className="List-item list-group-item"
-                key={item.id}
-                onClick={(e) => onItemClick(item.id)}
-              >
-                {item.name}
-              </li>
-            ))}
+          {filteredUsers.map((item) => (
+            <li
+              className="List-item list-group-item"
+              key={item.id}
+              onClick={(e) => onItemClick(item.id)}
+            >
+              {item.name}
+            </li>
+          ))}
         </ul>
       )}
     </div>
