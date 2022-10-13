@@ -30,12 +30,8 @@ const Container = () => {
           </span>
         </p>
       </div>
-      <BackgroundColorPicker
-        onChange={() => {
-          console.log("FOO");
-        }}
-      />
-      <List title={"Users"} />
+      <BackgroundColorPicker />
+      <List title="Users" />
     </div>
   );
 };

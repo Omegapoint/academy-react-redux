@@ -5,7 +5,7 @@
 I `App.jsx`:
 
 ```javascript
-<List title={"Users"} items={/*TODO: Task 4 */ []} />
+<List title="Users" items={/*TODO: Task 4 */ []} />
 ```
 
 ## Task 3
