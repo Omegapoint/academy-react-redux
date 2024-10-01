@@ -8,7 +8,7 @@ Observera att det här i första hand inte är en kurs för dig som jobbar med n
 
 ## Förberedelser
 
-- Det är fördelaktigt om man installerat Node i förväg. Detta går att få tag i på https://nodejs.org/en/ eller via homebrew om du sitter på en Mac. Du behöver ha version >=14 installerat för att allt ska flyta på så smidigt som möjligt.
+- Det är fördelaktigt om man installerat Node i förväg. Detta går att få tag i på https://nodejs.org/en/ eller via homebrew om du sitter på en Mac. Du behöver ha version nära LTS installerat för att allt ska flyta på så smidigt som möjligt.
 - Det är bra, men inte ett måste, att ha installerat [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) och [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd) till Chrome i förväg.
 - Du bör även ha tillgång till en utvecklingsmiljö som har bra stöd för JavaScript. VsCode, IntelliJ eller WebStorm fungerar fint.
 
