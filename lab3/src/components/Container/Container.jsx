@@ -3,12 +3,13 @@ import BackgroundColorPicker from "../BackgroundColorPicker/BackgroundColorPicke
 import List from "../List/List";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllUsers } from "../../actions/userActions";
+import { selectBackgroundColor } from "../../features/background/backgroundSlice";
 
 import "./Container.css";
 
 const Container = () => {
   const dispatch = useDispatch();
-  const backgroundColor = useSelector((state) => state.background.bgColor);
+  const backgroundColor = useSelector(selectBackgroundColor);
 
   // TODO: Task 5 - Get all users upon mounting the component
   useEffect(() => {

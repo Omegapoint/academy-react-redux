@@ -1,14 +1,14 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { setBackgroundColor } from "../../actions/backgroundActions";
 import colors from "./colors";
+import { updatedBackgroundColor } from "../../features/background/backgroundSlice";
 import "./BackgroundColorPicker.css";
 
 const BackgroundColorPicker = () => {
   const dispatch = useDispatch();
 
   const handleOnChange = (e) => {
-    dispatch(setBackgroundColor(e.target.value));
+    dispatch(updatedBackgroundColor(e.target.value));
   };
 
   return (
