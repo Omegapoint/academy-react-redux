@@ -11,7 +11,9 @@ const Container = () => {
   const backgroundColor = useSelector((state) => state.background.bgColor);
 
   // TODO: Task 5 - Get all users upon mounting the component
-  useEffect(() => {}, []);
+  useEffect(() => {
+    dispatch(getAllUsers());
+  }, []);
 
   return (
     <div

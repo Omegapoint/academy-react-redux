@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
+import { useSelector } from "react-redux";
 
 import "./List.css";
 
@@ -7,7 +8,7 @@ const List = ({ title }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   // Task 6: Get users from store
-  const users = [];
+  const users = useSelector((state) => state.users.all);
 
   const onItemClick = (userId) => {
     console.log("Clicked on user", userId);
