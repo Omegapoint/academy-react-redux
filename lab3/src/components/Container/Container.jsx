@@ -38,7 +38,7 @@ const Container = () => {
         </div>
         <BackgroundColorPicker />
         <AvatarPicker />
-        <List title="Users" />
+        <List title="Användare" />
       </div>
     </>
   );
