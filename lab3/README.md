@@ -25,7 +25,10 @@ För att lösa uppgiften behöver du:
 - Skapa en ny action `userSlice.js` som tar in ett id och gör ett asynkront anrop mot `api.js` för att hämta ut detaljerad användardata för en användare.
 - Utöka state i `userSlice.js` till att även innehålla detaljerad användardata.
 - Dispatcha en nytt action för detaljerad användardata från `onItemClick()` i `List.jsx` via `useDispatch()`.
+- Rita även ut en `<Spinner />` medans den detaljerade användardatan hämtas och en `<Error />` när det misslyckas.
 - Läsa in den detaljerade användardatan från applikationens state till din nya komponent.
+
+Lycka till!
 
 ##### _Del två finns löst i solutions-branchen om du bara vill se lösningen_ 😇
 
