@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
+import { useSelector } from "react-redux";
+import { selectUsers } from "../../features/users/usersSlice";
 
 import "./List.css";
 import {useDispatch, useSelector} from "react-redux";
@@ -9,7 +11,7 @@ const List = ({ title }) => {
   const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = useState("");
 
-  const users = useSelector((state) => state.users.all);
+  const users = useSelector(selectUsers);
 
   const onItemClick = (userId) => {
     dispatch(getUserById(userId));
@@ -20,7 +22,7 @@ const List = ({ title }) => {
   };
 
   const filterUsersBySearchTerm = (searchTerm) =>
-    users.filter((user) =>
+    users.all.filter((user) =>
       user.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
@@ -34,16 +36,15 @@ const List = ({ title }) => {
         <div className="alert alert-warning">Empty list...</div>
       ) : (
         <ul className="list-group">
-          {
-            filteredUsers.map((item) => (
-              <li
-                className="List-item list-group-item"
-                key={item.id}
-                onClick={(e) => onItemClick(item.id)}
-              >
-                {item.name}
-              </li>
-            ))}
+          {filteredUsers.map((item) => (
+            <li
+              className="List-item list-group-item"
+              key={item.id}
+              onClick={(e) => onItemClick(item.id)}
+            >
+              {item.name}
+            </li>
+          ))}
         </ul>
       )}
     </div>

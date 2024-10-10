@@ -1,0 +1,12 @@
+.circle {
+    width: 80px; /* Diameter of the circle */
+    height: 80px; /* Diameter of the circle */
+    background-color: lightgrey; /* Circle background color */
+    border-radius: 50%; /* Makes it a circle */
+    display: flex; /* To center content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    color: white; /* Text color */
+    font-size: 40px;
+    border: thick double #007bff;
+  }

@@ -1,18 +1,14 @@
+import { configureStore } from "@reduxjs/toolkit";
+import backgroundReducer from "./features/background/backgroundSlice";
+import userReducer from "./features/users/usersSlice";
+import avatarReducer from "./features/avatar/avatarSlice";
 
-import { applyMiddleware, createStore } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
-import logger from "redux-logger";
-import thunk from "redux-thunk";
-import rootReducer from "./reducers/reducers";
+const store = configureStore({
+  reducer: {
+    background: backgroundReducer,
+    users: userReducer,
+    avatar: avatarReducer,
+  },
+});
 
-const configureStore = (preloadedState) => {
-
-    const middleware = [
-        thunk,
-        logger
-    ];
-
-    return createStore(rootReducer, preloadedState, composeWithDevTools(applyMiddleware(...middleware)));
-};
-
-export default configureStore;
+export default store;

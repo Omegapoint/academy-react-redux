@@ -4,7 +4,7 @@
 
 ### Task 2
 
-I `backgroundReducers.js`:
+I `avatarSlice.js`:
 
 ```javascript
 const initialState = {
@@ -14,47 +14,64 @@ const initialState = {
 
 ### Task 3
 
-I `userActions.js`:
+I `avatarSlice.js`:
 
 ```javascript
-    .then((users) => {
-        useDispatch({
-            type: USERS_RECEIVED,
-            payload: users
-        })
-    })
+const avatarSlice = createSlice({
+  name: "avatar",
+  initialState,
+  reducers: {
+    updatedAvatar: (state, action) => {
+      state.currentAvatar = action.payload;
+    },
+  },
+});
 ```
 
 ### Task 4
 
-I `userReducers.js`:
+I `avatarSlice.js`:
 
 ```javascript
-    ...
-    case USERS_RECEIVED:
-        return {
-            all: action.payload,
-            error: null
-        };
-    ...
+const avatarSlice = createSlice({
+  name: "avatar",
+  initialState,
+  reducers: {
+    updatedAvatar: (state, action) => {
+      state.currentAvatar = action.payload;
+    },
+    resetAvatar: (state, action) => {
+      state.currentAvatar = null;
+    },
+  },
+});
+...
+...
+export const { updatedAvatar, resetAvatar } = avatarSlice.actions;
 ```
 
 ### Task 5
 
-I `Container.js`:
+I `AvatarPicker.jsx`:
 
 ```javascript
-useEffect(() => {
-  dispatch(getAllUsers());
-}, []);
+const dispatch = useDispatch();
+
+const handleOnClick = (avatar) => {
+  dispatch(updatedAvatar(avatar));
+};
+
+const handleOnReset = () => {
+  dispatch(resetAvatar());
+};
 ```
 
 ### Task 6
 
-I `List.js`:
+I `NavBar.jsx`:
 
 ```javascript
-const users = useSelector((state) => state.users.all);
+const avatar = useSelector(selectCurrentAvatar);
 ```
 
 ## Del 2
