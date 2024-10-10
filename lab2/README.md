@@ -19,4 +19,5 @@ Från projektroten: `$ cd lab2`, `$ npm install` följt av `$ npm start`. Gå se
 
 1. Hjälp en vän.
 2. Utöka List-komponenten till att innehålla lite mer detaljerad användarinformation för varje item i listan.
-3. Ta en kaffe ☕️
+3. Testa att skapa och styla en egen komponent från grunden.
+4. Ta en kaffe ☕️

@@ -18,6 +18,7 @@ const List = ({ items = [], title }) => {
 
   // TODO: Task 8: Set up filtering by declaring filteredItems.
   // const filteredItems = ...
+
   return (
     <div className="List">
       <h2 className="List-title">{title}</h2>
