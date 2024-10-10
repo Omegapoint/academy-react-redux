@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
-import { useSelector } from "react-redux";
-import { selectUsers } from "../../features/users/usersSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchUser, selectUsers } from "../../features/users/usersSlice";
 
 import "./List.css";
-import {useDispatch, useSelector} from "react-redux";
-import {getUserById} from "../../actions/userActions";
 
 const List = ({ title }) => {
   const dispatch = useDispatch();
@@ -14,7 +12,7 @@ const List = ({ title }) => {
   const users = useSelector(selectUsers);
 
   const onItemClick = (userId) => {
-    dispatch(getUserById(userId));
+    dispatch(fetchUser(userId));
   };
 
   const onKeyPressed = (e) => {

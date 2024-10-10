@@ -5,12 +5,12 @@ import "./NavBar.css";
 
 const NavBar = () => {
   // TODO: Task 6 - Implement selector
-  const avatar = null;
+  const avatar = useSelector(selectCurrentAvatar);
 
   return (
-    <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid">
-        <p class="navbar-brand">
+    <nav className="navbar bg-body-tertiary">
+      <div className="container-fluid">
+        <p className="navbar-brand">
           <span className="circle">{avatar || "🚫"}</span>
         </p>
       </div>

@@ -1,8 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  // TODO: Task 2
-  bgColor: "lavender",
+  bgColor: "gold",
 };
 
 const backgroundSlice = createSlice({

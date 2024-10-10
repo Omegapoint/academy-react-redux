@@ -1,21 +1,17 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import {
-  resetAvatar,
-  updatedAvatar,
-  selectCurrentAvatar,
-} from "../../features/avatar/avatarSlice";
+import { resetAvatar, updatedAvatar } from "../../features/avatar/avatarSlice";
 import "./AvatarPicker.css";
 
 const AvatarPicker = () => {
   const dispatch = useDispatch();
 
   const handleOnClick = (avatar) => {
-    // TODO: Task 5 - dispatch
+    dispatch(updatedAvatar(avatar));
   };
 
   const handleOnReset = () => {
-    // TODO: Task 5 - dispatch
+    dispatch(resetAvatar());
   };
 
   return (

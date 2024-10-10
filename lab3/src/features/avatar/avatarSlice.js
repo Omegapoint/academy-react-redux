@@ -10,15 +10,16 @@ const avatarSlice = createSlice({
   initialState,
   reducers: {
     updatedAvatar: (state, action) => {
-      // TODO: Task 3 - update the state
+      state.currentAvatar = action.payload;
     },
-    // TODO: Task 4 - add a reset action
+    resetAvatar: (state, action) => {
+      state.currentAvatar = null;
+    },
   },
 });
 
 // Export actions
-// TODO: Task 4 - Don't forget to export the reset action!
-export const { updatedAvatar } = avatarSlice.actions;
+export const { updatedAvatar, resetAvatar } = avatarSlice.actions;
 
 // Avatar selector
 export const selectCurrentAvatar = (state) => state.avatar.currentAvatar;

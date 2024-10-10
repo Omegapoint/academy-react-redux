@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import BackgroundColorPicker from "../BackgroundColorPicker/BackgroundColorPicker";
 import List from "../List/List";
 import AvatarPicker from "../AvatarPicker/AvatarPicker";
+import UserDetails from "../UserDetails/UserDetails";
 import { useDispatch, useSelector } from "react-redux";
 import { selectBackgroundColor } from "../../features/background/backgroundSlice";
 import { fetchUsers } from "../../features/users/usersSlice";
@@ -38,6 +39,7 @@ const Container = () => {
         </div>
         <BackgroundColorPicker />
         <AvatarPicker />
+        <UserDetails />
         <List title="Users" />
       </div>
     </>
