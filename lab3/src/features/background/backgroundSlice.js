@@ -2,14 +2,14 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   // TODO: Task 2
-  bgColor: "gold",
+  bgColor: "lavender",
 };
 
 const backgroundSlice = createSlice({
   name: "background",
   initialState,
   reducers: {
-    updatedBackgroundColor(state, action) {
+    updatedBackgroundColor: (state, action) => {
       state.bgColor = action.payload;
     },
   },

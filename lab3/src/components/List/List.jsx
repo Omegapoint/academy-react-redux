@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import { useSelector } from "react-redux";
+import { selectUsers } from "../../features/users/usersSlice";
 
 import "./List.css";
 
 const List = ({ title }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Task 6: Get users from store
-  const users = useSelector((state) => state.users.all);
+  const users = useSelector(selectUsers);
 
   const onItemClick = (userId) => {
     console.log("Clicked on user", userId);
@@ -19,7 +19,7 @@ const List = ({ title }) => {
   };
 
   const filterUsersBySearchTerm = (searchTerm) =>
-    users.filter((user) =>
+    users.all.filter((user) =>
       user.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 

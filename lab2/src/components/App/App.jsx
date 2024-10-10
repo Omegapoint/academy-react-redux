@@ -17,7 +17,6 @@ const App = () => {
 
   const changeBackgroundColor = (e) => {
     const color = e.target.value;
-    setBackgroundColor(color);
     // TODO: Task 3 - change background color by setting state.
   };
 
@@ -36,7 +35,7 @@ const App = () => {
         </p>
       </div>
       <BackgroundColorPicker onChange={changeBackgroundColor} />
-      <List title="My List" items={users} />
+      <List title="*Insert title" items={/*TODO: Task 4 */ []} />
     </div>
   );
 };
