@@ -10,14 +10,14 @@ type Props = {
 };
 
 const List = ({ items = [], title }: Props) => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState<string>("");
 
   const onKeyPressed = (e: React.ChangeEvent<HTMLInputElement>) => {
     // const searchTerm = e.target.value;
     // TODO: Task 7. Implement callback logic.
   };
 
-  const filterListItemsBySearchTerm = (searchTerm: string) =>
+  const filterListItemsBySearchTerm = (searchTerm: string): Array<User> =>
     items.filter((item) =>
       item.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
