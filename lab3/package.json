@@ -7,20 +7,21 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
-    "react-scripts": "^5.0.1",
     "redux": "4.1.2",
     "redux-thunk": "^2.4.1",
     "typeface-lato": "^1.1.13"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "react-refresh": "^0.17.0",
     "redux-devtools-extension": "2.13.8",
-    "redux-logger": "3.0.6"
+    "redux-logger": "3.0.6",
+    "vite": "^6.2.5"
   },
   "browserslist": [
     ">0.2%",
