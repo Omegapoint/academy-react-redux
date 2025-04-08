@@ -17,7 +17,7 @@ const avatarSlice = createSlice({
     updatedAvatar: (state, action: PayloadAction<string>) => {
       state.currentAvatar = action.payload;
     },
-    resetAvatar: (state, action) => {
+    resetAvatar: (state) => {
       state.currentAvatar = null;
     },
   },

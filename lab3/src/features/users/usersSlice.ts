@@ -4,11 +4,19 @@ import { User } from "../../models/user.model";
 import { RootState } from "../../store";
 
 type UsersState = {
-  status: "uninitialized" | "loading" | "success" | "failed";
-  all: Array<User>;
-  error: string | null;
+  users: {
+    all: Array<User>;
+    status: "uninitialized" | "loading" | "success" | "failed";
+    error: string | null;
+  };
+  user: {
+    selectedUser: User | null;
+    status: "uninitialized" | "loading" | "success" | "failed";
+    error: string | null;
+  };
 };
-const initialState = {
+
+const initialState: UsersState = {
   users: {
     all: [],
     status: "uninitialized",
@@ -30,10 +38,13 @@ export const fetchUsers = createAsyncThunk<Array<User>>(
   }
 );
 
-export const fetchUser = createAsyncThunk("users/fetchUser", async (userId) => {
-  const user = await getUser(userId);
-  return user;
-});
+export const fetchUser = createAsyncThunk(
+  "users/fetchUser",
+  async (userId: number) => {
+    const user = await getUser(userId);
+    return user;
+  }
+);
 
 export const usersSlice = createSlice({
   name: "users",
@@ -49,7 +60,7 @@ export const usersSlice = createSlice({
         state.users.status = "success";
         state.users.all = action.payload;
       })
-      .addCase(fetchUsers.rejected, (state, action) => {
+      .addCase(fetchUsers.rejected, (state, _) => {
         state.users.status = "failed";
       })
       .addCase(fetchUser.pending, (state) => {
@@ -59,7 +70,7 @@ export const usersSlice = createSlice({
         state.user.status = "success";
         state.user.selectedUser = action.payload;
       })
-      .addCase(fetchUser.rejected, (state, action) => {
+      .addCase(fetchUser.rejected, (state, _) => {
         state.user.status = "failed";
       });
   },

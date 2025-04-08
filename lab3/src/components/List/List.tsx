@@ -5,13 +5,14 @@ import { fetchUser, selectUsers } from "../../features/users/usersSlice";
 
 import "./List.css";
 import { User } from "../../models/user.model";
+import { AppDispatch } from "../../store";
 
 type Props = {
   title: string;
 };
 
 const List = ({ title }: Props) => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const [searchTerm, setSearchTerm] = useState("");
 
   const users = useSelector(selectUsers);
