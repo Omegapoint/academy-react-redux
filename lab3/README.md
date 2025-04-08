@@ -1,5 +1,7 @@
 # Lab 3
 
+Instruktionerna nedan förutsätter att du står i katalogen `lab3` i detta repo i terminalen.
+
 ## Starta applikationen för Lab 3
 
 Från projektroten: `$ cd lab3`, `$ npm install` följt av `$ npm start`. Gå sedan in på http://localhost:3000/ för att öppna upp applikationen.
