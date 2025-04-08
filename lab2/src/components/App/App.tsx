@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, ChangeEventHandler } from "react";
 import { getUsers } from "../../api";
 import List from "../List/List";
 import BackgroundColorPicker from "../BackgroundColorPicker/BackgroundColorPicker";
 
 import "./App.css";
+import { User } from "../../models/user.model";
 
 const App = () => {
-  const [users, setUsers] = useState([]);
-  const [bgColor, setBackgroundColor] = useState("lavender");
+  const [users, setUsers] = useState<Array<User>>([]);
+  const [bgColor, setBackgroundColor] = useState<string>("lavender");
 
   useEffect(() => {
     getUsers().then((users) => {
@@ -15,7 +16,7 @@ const App = () => {
     });
   }, []);
 
-  const changeBackgroundColor = (e) => {
+  const changeBackgroundColor = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const color = e.target.value;
     // TODO: Task 3 - change background color by setting state.
   };

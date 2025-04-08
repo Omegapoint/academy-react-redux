@@ -1,6 +1,10 @@
 import React from "react";
 
-const SearchBar = ({ value, onKeyPressed }) => (
+type Props = {
+  onKeyPressed: (e: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+const SearchBar = ({ onKeyPressed }: Props) => (
   <div className="input-group mb-12">
     <div className="input-group-prepend">
       <span
@@ -19,7 +23,6 @@ const SearchBar = ({ value, onKeyPressed }) => (
       aria-label="Sökterm"
       aria-describedby="basic-addon1"
       autoFocus
-      value={value}
       onChange={onKeyPressed}
     />
   </div>

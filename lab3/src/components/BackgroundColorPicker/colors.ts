@@ -1,4 +1,6 @@
-const colors = [
+import { Color } from "../../models/color.model";
+
+const colors: Array<Color> = [
   {
     hex: "lavender",
     name: "lavender",
