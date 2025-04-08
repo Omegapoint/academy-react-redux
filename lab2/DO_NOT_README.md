@@ -2,18 +2,18 @@
 
 ## Task 2
 
-I `App.jsx`:
+I `App.tsx`:
 
-```javascript
+```typescript
 <List title="Users" items={/*TODO: Task 4 */ []} />
 ```
 
 ## Task 3
 
-I `App.jsx`:
+I `App.tsx`:
 
-```javascript
-const changeBackgroundColor = (e) => {
+```typescript
+const changeBackgroundColor = (e: React.ChangeEvent<HTMLSelectElement>) => {
   const color = e.target.value;
   setBackgroundColor(color);
 };
@@ -21,22 +21,22 @@ const changeBackgroundColor = (e) => {
 
 ## Task 4
 
-I `App.jsx`:
+I `App.tsx`:
 
-```javascript
+```typescript
 <List title={"Users"} items={users} />
 ```
 
 ## Task 6
 
-I `List.jsx`:
+I `List.tsx`:
 
-```javascript
+```typescript
     render() {
         ...
         {
-            items.map((item, index) => (
-                <li className="list-group-item" key={index}>{item.name}</li>
+            items.map((item) => (
+                <li className="list-group-item" key={item.id}>{item.name}</li>
             ))
         }
         ...
@@ -45,10 +45,10 @@ I `List.jsx`:
 
 ## Task 7
 
-I `List.jsx`:
+I `List.tsx`:
 
-```javascript
-const onKeyPressed = (e) => {
+```typescript
+const onKeyPressed = (e: React.ChangeEvent<HTMLInputElement>) => {
   const searchTerm = e.target.value;
   setSearchTerm(searchTerm);
 };
@@ -56,15 +56,15 @@ const onKeyPressed = (e) => {
 
 ## Task 8
 
-I `List.jsx`:
+I `List.tsx`:
 
-```javascript
+```typescript
     render() {
-        const filteredItems = this.filterListItemsBySearchTerm(searchTerm);
+        const filteredItems: Array<User> = this.filterListItemsBySearchTerm(searchTerm);
         ...
         {filteredItems.length > 0 &&
-            filteredItems.map((item, index) => (
-                <li className="list-group-item" key={index}>{item.name}</li>
+            filteredItems.map((item) => (
+                <li className="list-group-item" key={item.id}>{item.name}</li>
             ))
         }
         ...

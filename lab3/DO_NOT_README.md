@@ -4,24 +4,24 @@
 
 ### Task 2
 
-I `avatarSlice.js`:
+I `backgroundColorSlice.ts`:
 
 ```javascript
-const initialState = {
+const initialState: BackgroundState = {
   bgColor: "gold",
 };
 ```
 
 ### Task 3
 
-I `avatarSlice.js`:
+I `avatarSlice.ts`:
 
 ```javascript
 const avatarSlice = createSlice({
   name: "avatar",
   initialState,
   reducers: {
-    updatedAvatar: (state, action) => {
+    updatedAvatar: (state, action: PayloadAction<string>) => {
       state.currentAvatar = action.payload;
     },
   },
@@ -30,17 +30,17 @@ const avatarSlice = createSlice({
 
 ### Task 4
 
-I `avatarSlice.js`:
+I `avatarSlice.ts`:
 
 ```javascript
 const avatarSlice = createSlice({
   name: "avatar",
   initialState,
   reducers: {
-    updatedAvatar: (state, action) => {
+    updatedAvatar: (state, action: PayloadAction<string>) => {
       state.currentAvatar = action.payload;
     },
-    resetAvatar: (state, action) => {
+    resetAvatar: (state) => {
       state.currentAvatar = null;
     },
   },
@@ -52,12 +52,12 @@ export const { updatedAvatar, resetAvatar } = avatarSlice.actions;
 
 ### Task 5
 
-I `AvatarPicker.jsx`:
+I `AvatarPicker.tsx`:
 
 ```javascript
 const dispatch = useDispatch();
 
-const handleOnClick = (avatar) => {
+const handleOnClick = (avatar: string) => {
   dispatch(updatedAvatar(avatar));
 };
 
@@ -68,7 +68,7 @@ const handleOnReset = () => {
 
 ### Task 6
 
-I `NavBar.jsx`:
+I `NavBar.tsx`:
 
 ```javascript
 const avatar = useSelector(selectCurrentAvatar);
