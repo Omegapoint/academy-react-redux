@@ -1,17 +1,18 @@
-import React, { useEffect } from "react";
-import BackgroundColorPicker from "../BackgroundColorPicker/BackgroundColorPicker";
-import List from "../List/List";
-import AvatarPicker from "../AvatarPicker/AvatarPicker";
-import UserDetails from "../UserDetails/UserDetails";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectBackgroundColor } from "../../features/background/backgroundSlice";
 import { fetchUsers } from "../../features/users/usersSlice";
+import AvatarPicker from "../AvatarPicker/AvatarPicker";
+import BackgroundColorPicker from "../BackgroundColorPicker/BackgroundColorPicker";
+import List from "../List/List";
+import UserDetails from "../UserDetails/UserDetails";
 
-import "./Container.css";
+import { AppDispatch } from "../../store";
 import NavBar from "../NavBar/NavBar";
+import "./Container.css";
 
 const Container = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   const backgroundColor = useSelector(selectBackgroundColor);
 
   useEffect(() => {

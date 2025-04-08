@@ -5,7 +5,7 @@ import "./NavBar.css";
 
 const NavBar = () => {
   // TODO: Task 6 - Implement selector
-  const avatar = useSelector(selectCurrentAvatar);
+  const avatar: string | null = useSelector(selectCurrentAvatar);
 
   return (
     <nav className="navbar bg-body-tertiary">

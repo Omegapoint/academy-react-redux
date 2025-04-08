@@ -2,7 +2,11 @@ import React from "react";
 import colors from "./colors";
 import "./BackgroundColorPicker.css";
 
-const BackgroundColorPicker = ({ onChange }) => (
+type Props = {
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+};
+
+const BackgroundColorPicker = ({ onChange }: Props) => (
   <div className="BackgroundColorPicker">
     <h5>Välj bakgrundsfärg</h5>
     <select className="custom-select" onChange={onChange}>

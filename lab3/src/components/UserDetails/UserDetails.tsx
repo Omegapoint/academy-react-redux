@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../../features/users/usersSlice";
 import Spinner from "../Spinner/Spinner";
 import Error from "../Error/Error";
+import { User } from "../../models/user.model";
 
 const UserDetails = () => {
   const user = useSelector(selectUser);
@@ -15,7 +16,7 @@ const UserDetails = () => {
     return <Error message="Something went wrong when fetching user details" />;
   }
 
-  if (user.status === "success") {
+  if (user.status === "success" && user.selectedUser !== null) {
     const { name, username, email, website, company } = user.selectedUser;
     return (
       <div className="UserDetails">

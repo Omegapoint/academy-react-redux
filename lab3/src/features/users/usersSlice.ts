@@ -1,7 +1,22 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { getUsers, getUser } from "../../api";
+import { User } from "../../models/user.model";
+import { RootState } from "../../store";
 
-const initialState = {
+type UsersState = {
+  users: {
+    all: Array<User>;
+    status: "uninitialized" | "loading" | "success" | "failed";
+    error: string | null;
+  };
+  user: {
+    selectedUser: User | null;
+    status: "uninitialized" | "loading" | "success" | "failed";
+    error: string | null;
+  };
+};
+
+const initialState: UsersState = {
   users: {
     all: [],
     status: "uninitialized",
@@ -15,15 +30,21 @@ const initialState = {
 };
 
 // We use createAsyncThunk to create an action creator that returns a function we can dispatch.
-export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
-  const users = await getUsers();
-  return users;
-});
+export const fetchUsers = createAsyncThunk<Array<User>>(
+  "users/fetchUsers",
+  async () => {
+    const users: Array<User> = await getUsers();
+    return users;
+  }
+);
 
-export const fetchUser = createAsyncThunk("users/fetchUser", async (userId) => {
-  const user = await getUser(userId);
-  return user;
-});
+export const fetchUser = createAsyncThunk(
+  "users/fetchUser",
+  async (userId: number) => {
+    const user = await getUser(userId);
+    return user;
+  }
+);
 
 export const usersSlice = createSlice({
   name: "users",
@@ -39,7 +60,7 @@ export const usersSlice = createSlice({
         state.users.status = "success";
         state.users.all = action.payload;
       })
-      .addCase(fetchUsers.rejected, (state, action) => {
+      .addCase(fetchUsers.rejected, (state, _) => {
         state.users.status = "failed";
       })
       .addCase(fetchUser.pending, (state) => {
@@ -49,13 +70,13 @@ export const usersSlice = createSlice({
         state.user.status = "success";
         state.user.selectedUser = action.payload;
       })
-      .addCase(fetchUser.rejected, (state, action) => {
+      .addCase(fetchUser.rejected, (state, _) => {
         state.user.status = "failed";
       });
   },
 });
 
-export const selectUsers = (state) => state.users.users;
-export const selectUser = (state) => state.users.user;
+export const selectUsers = (state: RootState) => state.users.users;
+export const selectUser = (state: RootState) => state.users.user;
 
 export default usersSlice.reducer;
