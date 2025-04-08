@@ -1,6 +1,6 @@
 # Lab 1
 
-Instruktionerna nedan förutsätter att du står i katalogen `lab1` i detta repo.
+Instruktionerna nedan förutsätter att du står i katalogen `lab1` i detta repo i terminalen.
 
 1. Skapa ett nytt projekt från terminalen
    `$ npm create vite@latest my-app -- --template react`.

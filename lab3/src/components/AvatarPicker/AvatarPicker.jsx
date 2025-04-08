@@ -1,10 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import {
-  resetAvatar,
-  updatedAvatar,
-  selectCurrentAvatar,
-} from "../../features/avatar/avatarSlice";
+import { updatedAvatar } from "../../features/avatar/avatarSlice";
 import "./AvatarPicker.css";
 
 const AvatarPicker = () => {
