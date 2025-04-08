@@ -1,6 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { getUsers, getUser } from "../../api";
+import { User } from "../../models/user.model";
+import { RootState } from "../../store";
 
+type UsersState = {
+  status: "uninitialized" | "loading" | "success" | "failed";
+  all: Array<User>;
+  error: string | null;
+};
 const initialState = {
   users: {
     all: [],
@@ -15,10 +22,13 @@ const initialState = {
 };
 
 // We use createAsyncThunk to create an action creator that returns a function we can dispatch.
-export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
-  const users = await getUsers();
-  return users;
-});
+export const fetchUsers = createAsyncThunk<Array<User>>(
+  "users/fetchUsers",
+  async () => {
+    const users: Array<User> = await getUsers();
+    return users;
+  }
+);
 
 export const fetchUser = createAsyncThunk("users/fetchUser", async (userId) => {
   const user = await getUser(userId);
@@ -55,7 +65,7 @@ export const usersSlice = createSlice({
   },
 });
 
-export const selectUsers = (state) => state.users.users;
-export const selectUser = (state) => state.users.user;
+export const selectUsers = (state: RootState) => state.users.users;
+export const selectUser = (state: RootState) => state.users.user;
 
 export default usersSlice.reducer;

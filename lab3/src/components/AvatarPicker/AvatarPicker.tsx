@@ -6,7 +6,7 @@ import "./AvatarPicker.css";
 const AvatarPicker = () => {
   const dispatch = useDispatch();
 
-  const handleOnClick = (avatar) => {
+  const handleOnClick = (avatar: string) => {
     dispatch(updatedAvatar(avatar));
   };
 

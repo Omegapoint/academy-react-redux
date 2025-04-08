@@ -1,6 +1,10 @@
 import React from "react";
 
-const SearchBar = ({ onKeyPressed }) => (
+type Props = {
+  onKeyPressed: (e: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+const SearchBar = ({ onKeyPressed }: Props) => (
   <div className="input-group mb-12">
     <div className="input-group-prepend">
       <span

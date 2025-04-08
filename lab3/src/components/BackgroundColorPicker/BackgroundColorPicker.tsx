@@ -7,7 +7,7 @@ import "./BackgroundColorPicker.css";
 const BackgroundColorPicker = () => {
   const dispatch = useDispatch();
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch(updatedBackgroundColor(e.target.value));
   };
 

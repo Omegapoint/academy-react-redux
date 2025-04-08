@@ -4,27 +4,32 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchUser, selectUsers } from "../../features/users/usersSlice";
 
 import "./List.css";
+import { User } from "../../models/user.model";
 
-const List = ({ title }) => {
+type Props = {
+  title: string;
+};
+
+const List = ({ title }: Props) => {
   const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = useState("");
 
   const users = useSelector(selectUsers);
 
-  const onItemClick = (userId) => {
+  const onItemClick = (userId: number) => {
     dispatch(fetchUser(userId));
   };
 
-  const onKeyPressed = (e) => {
+  const onKeyPressed = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
   };
 
-  const filterUsersBySearchTerm = (searchTerm) =>
-    users.all.filter((user) =>
+  const filterUsersBySearchTerm = (searchTerm: string): Array<User> =>
+    users.all.filter((user: User) =>
       user.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-  const filteredUsers = filterUsersBySearchTerm(searchTerm);
+  const filteredUsers: Array<User> = filterUsersBySearchTerm(searchTerm);
 
   return (
     <div className="List">

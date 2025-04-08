@@ -17,7 +17,7 @@ const List = ({ items = [], title }: Props) => {
     setSearchTerm(searchTerm);
   };
 
-  const filterListItemsBySearchTerm = (searchTerm: string) =>
+  const filterListItemsBySearchTerm = (searchTerm: string): Array<User> =>
     items.filter((item) =>
       item.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
