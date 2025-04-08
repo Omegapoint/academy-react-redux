@@ -1,5 +1,7 @@
 # Lab 3
 
+Instruktionerna nedan förutsätter att du står i katalogen `lab3` i detta repo i terminalen.
+
 ## Starta applikationen för Lab 3
 
 Från projektroten: `$ cd lab3`, `$ npm install` följt av `$ npm start`. Gå sedan in på http://localhost:3000/ för att öppna upp applikationen.
@@ -25,7 +27,10 @@ För att lösa uppgiften behöver du:
 - Skapa en ny action `userSlice.js` som tar in ett id och gör ett asynkront anrop mot `api.js` för att hämta ut detaljerad användardata för en användare.
 - Utöka state i `userSlice.js` till att även innehålla detaljerad användardata.
 - Dispatcha en nytt action för detaljerad användardata från `onItemClick()` i `List.jsx` via `useDispatch()`.
+- Rita även ut en `<Spinner />` medans den detaljerade användardatan hämtas och en `<Error />` när det misslyckas.
 - Läsa in den detaljerade användardatan från applikationens state till din nya komponent.
+
+Lycka till!
 
 ##### _Del två finns löst i solutions-branchen om du bara vill se lösningen_ 😇
 

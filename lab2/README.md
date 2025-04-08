@@ -1,5 +1,7 @@
 # Lab 2
 
+Instruktionerna nedan förutsätter att du står i katalogen `lab2` i detta repo i terminalen.
+
 ## Starta applikationen för Lab 2
 
 Från projektroten: `$ cd lab2`, `$ npm install` följt av `$ npm start`. Gå sedan in på http://localhost:3000/ för att öppna upp applikationen.
